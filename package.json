@@ -1,0 +1,17 @@
+{
+  "name": "elastic-demo",
+  "version": "1.0.0",
+  "description": "For Elastic search demos",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nadeem",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "elasticsearch": "^13.3.1",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.6"
+  }
+}
