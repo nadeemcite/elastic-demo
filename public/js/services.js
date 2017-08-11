@@ -1,0 +1,26 @@
+app.service('Modal',function($uibModal){
+    this.loader={
+        show:function(){
+            $(".loader-container").css('display','flex');
+        },
+        hide:function(){
+            $(".loader-container").css('display','none');
+        }
+    }
+    this.alert=function(title,text){
+        var modalInstance=$uibModal.open({
+            animation:true,
+            templateUrl:'alertModal.html',
+            controller:function($scope){
+                $scope.name='alert';
+                $scope.title=title;
+                $scope.text=text;
+                $scope.close=function(){
+                    modalInstance.dismiss();
+                }
+            },
+            size:'md'
+        });
+        modalInstance.result.then(function(){},function(){});
+    }
+});
