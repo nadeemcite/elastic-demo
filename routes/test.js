@@ -1,8 +1,10 @@
-var app=require('express').Router();
+const app=require('express').Router();
+app.get('/test',(req,res)=>{
+    global.elClient.ping((err)=>{
+        res.send(err||'Working fine');
+    });
+});
 
-app.get('/t',(req,res)=>{
-    res.send("success");
-})
 
 
 module.exports=app;
